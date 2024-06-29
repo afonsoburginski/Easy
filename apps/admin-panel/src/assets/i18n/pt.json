@@ -80,23 +80,23 @@
   },
   "branding": {
     "menu": {
-      "header": "Passeios"
+      "header": "Easy"
     },
     "footer": {
       "address": "http://ridy.io/",
-      "prefix": "© 2018-2023",
-      "title": "Ridy.io",
+      "prefix": "© 2023-2024",
+      "title": "Easy.driver",
       "suffix": "Todos os direitos reservados."
     },
     "page": {
-      "title": "Ridy Admin Panel"
+      "title": "Easy Admin Panel"
     }
   },
   "menu": {
     "home": {
-      "overview": "Visão geral",
+      "overview": "Dashboard",
       "dispatcher": "Expedidor",
-      "header": "Lar"
+      "header": "Home"
     },
     "driver": {
       "pendingVerification": "verificação pendente",
@@ -115,10 +115,10 @@
       "admin": "Administrador",
       "fleets": "frotas",
       "drivers": "motoristas",
-      "riders": "Cavaleiros",
+      "riders": "Passageiros",
       "header": "Contabilidade"
     },
-    "riders": "Cavaleiros",
+    "riders": "Passageiros",
     "requests": "solicitações de",
     "sos": "SOS",
     "complaints": "Reclamações",
@@ -174,7 +174,7 @@
       "requestsTitle": "Pedidos",
       "revenue": "Receita",
       "newDriverRegisters": "Registros de novos motoristas",
-      "newRiderRegisters": "Registros de novos pilotos"
+      "newRiderRegisters": "Registros de novos Morotistas"
     }
   },
   "notification": {
@@ -209,10 +209,10 @@
     "view": "Visualizar",
     "requestInfo": "Solicite informações",
     "name": "Nome",
-    "mobileNumber": "Número de telemóvel",
+    "mobileNumber": "Número de telefone",
     "registeredOn": "Registrado em",
     "driverInfo": "Informações do motorista",
-    "riderInfo": "Informações do piloto",
+    "riderInfo": "Informações do Morotista",
     "details": "Detalhes",
     "title": "Título",
     "content": "Contente",
@@ -286,7 +286,7 @@
     "subject": "Assunto",
     "type": "Tipo",
     "paymentGateway": "Gateway de pagamento",
-    "rider": "Cavaleiro",
+    "rider": "Passageiro",
     "admin": "Administrador",
     "coupon": "Cupom",
     "activities": "Cronograma de atividades",
@@ -326,7 +326,7 @@
   "dispatcher": {
     "removeLastPoint": "Remover último ponto",
     "rider": {
-      "title": "Cavaleiro",
+      "title": "Passageiro",
       "description": "Selecione o passageiro para atribuir a solicitação"
     },
     "location": {
@@ -338,7 +338,7 @@
       "description": "Serviço a ser solicitado"
     },
     "looking": {
-      "title": "Olhando",
+      "title": "Buscando",
       "description": "Procurando motorista elegível"
     },
     "determiningLocation": "Determinando localização, aguarde..."
@@ -360,7 +360,7 @@
     "deleteRiderConfirmation": {
       "content": "A exclusão das informações do passageiro ocultará o passageiro da lista de passageiros e o perfil não estará mais acessível."
     },
-    "deleteRiderCofirmAlert": "O piloto foi excluído."
+    "deleteRiderCofirmAlert": "O Morotista foi excluído."
   },
   "error": {
     "nameInvalid": "O nome não é válido",
@@ -431,7 +431,7 @@
     "expirationTime": "Data de validade"
   },
   "riders": {
-    "notFoundMessage": "Piloto não encontrado!",
+    "notFoundMessage": "Morotista não encontrado!",
     "tab": {
       "details": "Detalhes",
       "creditrecords": "Registros de crédito",

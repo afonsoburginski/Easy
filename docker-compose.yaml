@@ -18,7 +18,7 @@ services:
       - redisvol:/data
 
   taxi-rider-api:
-    image: taxi-rider-api
+    image: afonsoburginski/taxi-rider-api
     restart: always
     depends_on:
       - "mysql"
@@ -29,15 +29,16 @@ services:
       - ./config-new:/app/config
     environment:
       - MYSQL_HOST=mysql
-      - GATEWAY_SERVER_URL=http://localhost:3333
-      - RIDER_SERVER_URL=http://localhost:4000
+      - SHOW_DIRECTIONS=true
+      - GATEWAY_SERVER_URL=http://217.196.60.178:3333
+      - RIDER_SERVER_URL=http://217.196.60.178:4000
       - ENCRYPTION_KEY=lPw3ethAy4WqnWa3b4TAbCUJr89RifEs
       - REDIS_HOST=redis
     ports:
       - "4000:3000"
 
   taxi-driver-api:
-    image: taxi-driver-api
+    image: afonsoburginski/taxi-driver-api
     restart: always
     depends_on:
       - "mysql"
@@ -48,15 +49,16 @@ services:
       - ./config-new:/app/config
     environment:
       - MYSQL_HOST=mysql
-      - GATEWAY_SERVER_URL=http://localhost:3333
-      - DRIVER_SERVER_URL=http://localhost:4002
+      - SHOW_DIRECTIONS=true
+      - GATEWAY_SERVER_URL=http://217.196.60.178:3333
+      - DRIVER_SERVER_URL=http://217.196.60.178:4002
       - REDIS_HOST=redis
       - ENCRYPTION_KEY=lPw3ethAy4WqnWa3b4TAbCUJr89RifEs
     ports:
       - "4002:3000"
 
   taxi-admin-api:
-    image: taxi-admin-api
+    image: afonsoburginski/taxi-admin-api
     restart: always
     depends_on:
       - "mysql"
@@ -73,7 +75,7 @@ services:
       - "4001:3000"
 
   taxi-admin-panel:
-    image: taxi-admin-panel
+    image: afonsoburginski/taxi-admin-panel
     restart: always
     volumes:
        - taxiassets:/usr/share/nginx/html/assets
@@ -90,7 +92,7 @@ services:
       - MYSQL_HOST=mysql
       - TEST_MODE=true
       - MYSQL_DB=ridy
-      - GATEWAY_SERVER_URL=http://localhost:3333
+      - GATEWAY_SERVER_URL=http://217.196.60.178:3333
       - ENCRYPTION_KEY=lPw3ethAy4WqnWa3b4TAbCUJr89RifEs
 
 volumes:

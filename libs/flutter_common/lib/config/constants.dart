@@ -5,14 +5,14 @@ import '../core/entities/place.dart';
 import '../features/country_code_dialog/domain/entities/country_code.dart';
 
 class Constants {
-  static const String serverIp = "127.0.0.1";
+  static const String serverIp = "217.196.60.178";
   static const int resendOtpTime = 90;
   static const bool isDemoMode = false;
   static bool showTimeIn24HourFormat = true;
   static final CountryCode defaultCountry = CountryCode.parseByIso('US');
 
   static MapBoxProvider get mapBoxProvider => MapBoxProvider(
-        secretKey: "",
+        secretKey: "pk.eyJ1IjoiYWZvbnNvLWJ1cmdpbnNraSIsImEiOiJjbHh5cDVwZmMwMzRnMmlxNjM4MWJyYzJsIn0.BYf5_OK0LteDE4lBJYwpng",
         userId: "mapbox",
         tileSetId: "streets-v12",
       );

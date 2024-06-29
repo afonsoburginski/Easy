@@ -39,7 +39,7 @@ class SPt extends S {
   String get lastName => 'Sobrenome';
 
   @override
-  String get mobileNumber => 'Número de telemóvel';
+  String get mobileNumber => 'Número de telefone';
 
   @override
   String get edit => 'Editar';

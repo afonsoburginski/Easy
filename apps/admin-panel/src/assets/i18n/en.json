@@ -79,16 +79,16 @@
 	},
 	"branding": {
 		"menu": {
-			"header": "Ridy"
+			"header": "Easy"
 		},
 		"footer": {
 			"address": "http://ridy.io/",
-			"prefix": "© 2018-2023",
-			"title": "Ridy.io",
+			"prefix": "© 2023-2024",
+			"title": "Easy.driver",
 			"suffix": "All Rights reserved."
 		},
 		"page": {
-			"title": "Ridy Admin Panel"
+			"title": "Easy Admin Panel"
 		}
 	},
 	"menu": {
