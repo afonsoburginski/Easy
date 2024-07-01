@@ -63,7 +63,7 @@ List<Language> languages = [
     code: "nl",
   ),
   Language(
-    imagePath: Assets.countries.ptSvg.path,
+    imagePath: Assets.countries.ptBrSvg.path,
     name: "Portuguese",
     code: "pt",
   ),

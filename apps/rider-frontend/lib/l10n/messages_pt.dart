@@ -429,13 +429,13 @@ class SPt extends S {
   String get tripDetails => 'Detalhes da viagem';
 
   @override
-  String get rideDetails => 'Detalhes do passeio';
+  String get rideDetails => 'Detalhes do Viagens';
 
   @override
   String get orderARide => 'Peça uma carona';
 
   @override
-  String get noRidesYet => 'Ainda não há passeios!';
+  String get noRidesYet => 'Ainda não há Viagens!';
 
   @override
   String get issueSubjectPlaceholder => 'Digite o assunto do problema';
@@ -480,10 +480,10 @@ class SPt extends S {
   String get saveChanges => 'Salvar alterações';
 
   @override
-  String get rideHistory => 'Histórico de passeios';
+  String get rideHistory => 'Histórico de Viagens';
 
   @override
-  String get scheduledRides => 'Passeios programados';
+  String get scheduledRides => 'Viagens programados';
 
   @override
   String get keepTheOrder => 'Mantenha a ordem';
@@ -507,7 +507,7 @@ class SPt extends S {
   String get enterGiftCardCode => 'Insira o código do vale-presente';
 
   @override
-  String get redeemGiftCard => 'Resgatar cartão presente';
+  String get redeemGiftCard => 'Resgatar Gift Card';
 
   @override
   String get redeemGiftCardDescription => 'Digite o código do seu cartão-presente para resgatá-lo.';
@@ -521,7 +521,7 @@ class SPt extends S {
   }
 
   @override
-  String get addCredit => 'Adicionar crédito';
+  String get addCredit => 'Add Crédito';
 
   @override
   String get payNow => 'Pague agora';
@@ -542,7 +542,7 @@ class SPt extends S {
   String get wallet => 'Carteira';
 
   @override
-  String get totalRides => 'Total de viagens';
+  String get totalRides => 'Total viagens';
 
   @override
   String get appSettings => 'Configurações do aplicativo';
@@ -805,10 +805,10 @@ class SPt extends S {
   String get fullName => 'Nome completo';
 
   @override
-  String get favoriteDrivers => 'Motoristas favoritos';
+  String get favoriteDrivers => 'Motoristas';
 
   @override
-  String get distanceTraveled => 'Distância viajada';
+  String get distanceTraveled => 'Distância Total';
 
   @override
   String get rating => 'Avaliação';
@@ -820,7 +820,7 @@ class SPt extends S {
   String get income => 'Renda';
 
   @override
-  String get timeSpent => 'Tempo gasto';
+  String get timeSpent => 'Tempo online';
 
   @override
   String get daily => 'Diário';
