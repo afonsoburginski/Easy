@@ -394,7 +394,7 @@ class SEs extends S {
   }
 
   @override
-  String get submitFeedback => 'Enviar comentarios';
+  String get submitFeedback => 'Enviar comentario';
 
   @override
   String get typeAMessage => 'Escribe un mensaje';

@@ -394,7 +394,7 @@ class SPt extends S {
   }
 
   @override
-  String get submitFeedback => 'Enviar comentários';
+  String get submitFeedback => 'Enviar comentário';
 
   @override
   String get typeAMessage => 'Digite uma mensagem';
@@ -746,7 +746,7 @@ class SPt extends S {
   String get totalPrice => 'Preço total';
 
   @override
-  String get addCustomCredit => 'Adicionar edição personalizada';
+  String get addCustomCredit => 'Adicionar personalizado';
 
   @override
   String get serviceFee => 'Taxa de serviço';
