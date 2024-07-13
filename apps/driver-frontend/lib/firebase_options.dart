@@ -50,19 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC5k_hGg_FOa0eraALzL0a63A-Jbz6ZRFA',
-    appId: '1:284778205056:android:f047426a32f013400cfb65',
-    messagingSenderId: '284778205056',
-    projectId: 'easy-14676',
-    storageBucket: 'easy-14676.appspot.com',
+    apiKey: 'AIzaSyAUwbBuBCXsuf0_frhodnb2uSjsajJJwHU',
+    appId: '1:465137456828:android:d0d2b0ffa66533274f22b9',
+    messagingSenderId: '465137456828',
+    projectId: 'easy-92b14',
+    storageBucket: 'easy-92b14.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCrc-o4q-T7_-7hJ9aX4z-7GGTENJfiQqk',
-    appId: '1:284778205056:ios:0867d328b833697d0cfb65',
-    messagingSenderId: '284778205056',
-    projectId: 'easy-14676',
-    storageBucket: 'easy-14676.appspot.com',
-    iosBundleId: 'com.ridy.taxi.driver',
+    apiKey: 'AIzaSyAZYtnxvBYTIdeAPXPxJUBgAaPvb-GtsLc',
+    appId: '1:465137456828:ios:81060458148788324f22b9',
+    messagingSenderId: '465137456828',
+    projectId: 'easy-92b14',
+    storageBucket: 'easy-92b14.appspot.com',
+    iosBundleId: 'com.easydriver.app',
   );
+
 }

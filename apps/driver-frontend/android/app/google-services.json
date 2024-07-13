@@ -1,40 +1,21 @@
 {
   "project_info": {
-    "project_number": "284778205056",
-    "project_id": "easy-14676",
-    "storage_bucket": "easy-14676.appspot.com"
+    "project_number": "465137456828",
+    "project_id": "easy-92b14",
+    "storage_bucket": "easy-92b14.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:284778205056:android:f047426a32f013400cfb65",
+        "mobilesdk_app_id": "1:465137456828:android:d0d2b0ffa66533274f22b9",
         "android_client_info": {
-          "package_name": "com.ridy.taxi.driver"
+          "package_name": "com.easydriver.app"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC5k_hGg_FOa0eraALzL0a63A-Jbz6ZRFA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:284778205056:android:cbc6c728038027b00cfb65",
-        "android_client_info": {
-          "package_name": "com.ridy.taxi.rider"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyC5k_hGg_FOa0eraALzL0a63A-Jbz6ZRFA"
+          "current_key": "AIzaSyAUwbBuBCXsuf0_frhodnb2uSjsajJJwHU"
         }
       ],
       "services": {

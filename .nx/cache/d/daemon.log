@@ -1,0 +1,28 @@
+[NX Daemon Server] - 2024-07-04T20:01:43.292Z - Started listening on: \\.\pipe\nx\C:\Users\User\AppData\Local\Temp\74bf3aa5fd49825cdc1a\d.sock
+[NX Daemon Server] - 2024-07-04T20:01:43.297Z - [WATCHER]: Subscribed to changes within: C:\Users\User\Desktop\Easy (native)
+[NX Daemon Server] - 2024-07-04T20:01:43.307Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-07-04T20:01:43.309Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-07-04T20:01:43.309Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-07-04T20:01:43.311Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-07-04T20:01:43.423Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2024-07-04T20:01:43.423Z - [REQUEST]: 
+[NX Daemon Server] - 2024-07-04T20:01:43.423Z - [REQUEST]: 
+
+ >  NX   @nxrocks/nx-flutter is a v1 plugin.
+
+   Nx has recently released a v2 model for project graph plugins. The `processProjectGraph` method is deprecated. Plugins should use some combination of `createNodes` and `createDependencies` instead.
+
+[NX Daemon Server] - 2024-07-04T20:01:44.083Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-07-04T20:01:44.085Z - Time taken for 'total for creating and serializing project graph' 771.9025000035763ms
+[NX Daemon Server] - 2024-07-04T20:01:44.085Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-07-04T20:01:44.086Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 772. Response time: 3.
+[NX Daemon Server] - 2024-07-04T20:01:44.099Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-07-04T20:02:19.074Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-07-04T20:02:19.074Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-07-04T20:02:19.074Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-07-04T20:02:19.077Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2024-07-04T20:02:19.077Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2024-07-04T20:02:19.078Z - Time taken for 'total for creating and serializing project graph' 0.20829999446868896ms
+[NX Daemon Server] - 2024-07-04T20:02:19.078Z - Done responding to the client project-graph
+[NX Daemon Server] - 2024-07-04T20:02:19.078Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2024-07-04T20:02:19.093Z - Closed a connection. Number of open connections: 0

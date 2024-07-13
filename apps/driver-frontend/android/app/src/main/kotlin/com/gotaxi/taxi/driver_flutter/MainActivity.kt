@@ -1,4 +1,4 @@
-package com.gotaxi.taxi.driver_flutter
+package com.easydriver.driver_flutter
 
 import io.flutter.embedding.android.FlutterActivity
 

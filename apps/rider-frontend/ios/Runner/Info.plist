@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Ridy</string>
+	<string>Easy</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -66,10 +66,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.ridy.taxi.rider</string>
+			<string>com.easyrider.app</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.ridy.taxi.rider</string>
+				<string>com.easyrider.app</string>
 			</array>
 		</dict>
 	</array>
