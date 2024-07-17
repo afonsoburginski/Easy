@@ -9,7 +9,7 @@ class Constants {
   static const int resendOtpTime = 90;
   static const bool isDemoMode = false;
   static bool showTimeIn24HourFormat = true;
-  static final CountryCode defaultCountry = CountryCode.parseByIso('US');
+  static final CountryCode defaultCountry = CountryCode.parseByIso('BR');
 
   static MapBoxProvider get mapBoxProvider => MapBoxProvider(
         secretKey: "pk.eyJ1IjoiYWZvbnNvLWJ1cmdpbnNraSIsImEiOiJjbHh5cDVwZmMwMzRnMmlxNjM4MWJyYzJsIn0.BYf5_OK0LteDE4lBJYwpng",
