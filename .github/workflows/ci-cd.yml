@@ -61,7 +61,7 @@ jobs:
         mkdir -p ~/.ssh
         echo "${{ secrets.VPS_SSH_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa root@${{ secrets.VPS_HOST }} "echo 'SSH connection successful'"
+        ssh -v -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa root@${{ secrets.VPS_HOST }} "echo 'SSH connection successful'"
 
     - name: Copy files via SSH
       uses: appleboy/scp-action@v0.1.1
