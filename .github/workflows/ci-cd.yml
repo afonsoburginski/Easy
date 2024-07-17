@@ -53,6 +53,16 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Debug SSH Key
+      run: echo "${{ secrets.VPS_SSH_KEY }}"
+
+    - name: Test SSH Connection
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa root@${{ secrets.VPS_HOST }} "echo 'SSH connection successful'"
+
     - name: Copy files via SSH
       uses: appleboy/scp-action@v0.1.1
       with:
