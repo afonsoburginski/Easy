@@ -16,9 +16,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Verify docker-compose.yml Exists
-      run: ls -la docker-compose.yml
-
     - name: Add SSH Key
       run: |
         mkdir -p ~/.ssh
@@ -35,8 +32,11 @@ jobs:
     - name: Test SSH Connection
       run: ssh -v -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa root@${{ secrets.VPS_HOST }} "echo 'SSH connection successful'"
 
-    - name: Copy docker-compose.yml to VPS
-      run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa docker-compose.yml root@${{ secrets.VPS_HOST }}:/root/docker-compose.yml
+    - name: Download docker-compose.yml to VPS
+      run: |
+        ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa root@${{ secrets.VPS_HOST }} << 'EOF'
+          wget -O /root/docker-compose.yml https://raw.githubusercontent.com/afonsoburginski/Easy/main/docker-compose.yaml
+        EOF
 
     - name: Deploy to VPS
       run: |
