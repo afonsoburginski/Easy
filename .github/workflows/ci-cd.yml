@@ -34,17 +34,14 @@ jobs:
     - name: Test SSH Connection
       run: ssh -v -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa root@${{ secrets.VPS_HOST }} "echo 'SSH connection successful'"
 
+    - name: Copy docker-compose.yml to VPS
+      run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa docker-compose.yml root@${{ secrets.VPS_HOST }}:/root/docker-compose.yml
+
     - name: Deploy to VPS
       run: |
         ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa root@${{ secrets.VPS_HOST }} << 'EOF'
-          cd /root/project
+          cd /root
           docker-compose down
-          docker pull afonsoburginski/taxi-rider-api
-          docker pull afonsoburginski/taxi-driver-api
-          docker pull afonsoburginski/taxi-admin-panel
-          docker pull afonsoburginski/taxi-admin-api
-          docker pull ridyio/delivery-gateway-box
-          docker pull redis
-          docker pull mysql:8.0.22
+          docker-compose pull
           docker-compose up -d
         EOF
