@@ -45,11 +45,6 @@ jobs:
         docker build -f ./apps/rider-api/Dockerfile -t afonsoburginski/taxi-rider-api .
         docker push afonsoburginski/taxi-rider-api
 
-    - name: Build and push payment-gateways image
-      run: |
-        docker build -f ./apps/payment-gateways/Dockerfile -t afonsoburginski/payment-gateways .
-        docker push afonsoburginski/payment-gateways
-
   deploy:
     needs: build-and-push
     runs-on: ubuntu-latest
