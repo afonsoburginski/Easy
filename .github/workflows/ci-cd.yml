@@ -51,5 +51,3 @@ jobs:
           docker pull redis
           docker pull mysql:8.0.22
           docker-compose up -d
-        envs:
-          SSH_AUTH_SOCK: /tmp/ssh_agent.sock
