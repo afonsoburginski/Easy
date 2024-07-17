@@ -9,44 +9,7 @@ on:
       - main
 
 jobs:
-  build-and-push:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
-
-    - name: Log in to Docker Hub
-      uses: docker/login-action@v1
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-
-    - name: Build and push admin-api image
-      run: |
-        docker build -f ./apps/admin-api/Dockerfile -t afonsoburginski/taxi-admin-api .
-        docker push afonsoburginski/taxi-admin-api
-
-    - name: Build and push admin-panel image
-      run: |
-        docker build -f ./apps/admin-panel/Dockerfile -t afonsoburginski/taxi-admin-panel .
-        docker push afonsoburginski/taxi-admin-panel
-
-    - name: Build and push driver-api image
-      run: |
-        docker build -f ./apps/driver-api/Dockerfile -t afonsoburginski/taxi-driver-api .
-        docker push afonsoburginski/taxi-driver-api
-
-    - name: Build and push rider-api image
-      run: |
-        docker build -f ./apps/rider-api/Dockerfile -t afonsoburginski/taxi-rider-api .
-        docker push afonsoburginski/taxi-rider-api
-
   deploy:
-    needs: build-and-push
     runs-on: ubuntu-latest
 
     steps:
@@ -66,6 +29,7 @@ jobs:
         eval "$(ssh-agent -s)"
         ssh-add ~/.ssh/id_rsa
         ssh-add -l
+        ls -la ~/.ssh
 
     - name: Test SSH Connection
       run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa root@${{ secrets.VPS_HOST }} "echo 'SSH connection successful'"
