@@ -9,21 +9,8 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
-
-    services:
-      mysql:
-        image: mysql:8.0.22
-        env:
-          MYSQL_ROOT_PASSWORD: defaultpassword
-        ports:
-          - 3306:3306
-        options: >-
-          --health-cmd="mysqladmin ping"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=3
 
     steps:
     - name: Checkout code
@@ -38,15 +25,33 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build and push Docker images
+    - name: Build and push admin-api image
       run: |
-        docker buildx build --platform linux/amd64 --push -t afonsoburginski/taxi-rider-api ./apps/rider-api
-        docker buildx build --platform linux/amd64 --push -t afonsoburginski/taxi-driver-api ./apps/driver-api
-        docker buildx build --platform linux/amd64 --push -t afonsoburginski/taxi-admin-api ./apps/admin-api
-        docker buildx build --platform linux/amd64 --push -t afonsoburginski/taxi-admin-panel ./apps/admin-panel
+        docker build -f ./apps/admin-api/Dockerfile -t afonsoburginski/taxi-admin-api .
+        docker push afonsoburginski/taxi-admin-api
+
+    - name: Build and push admin-panel image
+      run: |
+        docker build -f ./apps/admin-panel/Dockerfile -t afonsoburginski/taxi-admin-panel .
+        docker push afonsoburginski/taxi-admin-panel
+
+    - name: Build and push driver-api image
+      run: |
+        docker build -f ./apps/driver-api/Dockerfile -t afonsoburginski/taxi-driver-api .
+        docker push afonsoburginski/taxi-driver-api
+
+    - name: Build and push rider-api image
+      run: |
+        docker build -f ./apps/rider-api/Dockerfile -t afonsoburginski/taxi-rider-api .
+        docker push afonsoburginski/taxi-rider-api
+
+    - name: Build and push payment-gateways image
+      run: |
+        docker build -f ./apps/payment-gateways/Dockerfile -t afonsoburginski/payment-gateways .
+        docker push afonsoburginski/payment-gateways
 
   deploy:
-    needs: build
+    needs: build-and-push
     runs-on: ubuntu-latest
 
     steps:
@@ -71,5 +76,11 @@ jobs:
         script: |
           cd /root/project
           docker-compose down
-          docker-compose pull
+          docker pull afonsoburginski/taxi-rider-api
+          docker pull afonsoburginski/taxi-driver-api
+          docker pull afonsoburginski/taxi-admin-panel
+          docker pull afonsoburginski/taxi-admin-api
+          docker pull ridyio/delivery-gateway-box
+          docker pull redis
+          docker pull mysql:8.0.22
           docker-compose up -d
