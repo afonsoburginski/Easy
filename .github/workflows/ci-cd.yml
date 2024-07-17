@@ -34,16 +34,9 @@ jobs:
     - name: Test SSH Connection
       run: ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa root@${{ secrets.VPS_HOST }} "echo 'SSH connection successful'"
 
-    - name: Copy files via SSH
-      uses: appleboy/scp-action@v0.1.1
-      with:
-        host: ${{ secrets.VPS_HOST }}
-        username: ${{ secrets.VPS_USER }}
-        key: ${{ secrets.VPS_SSH_KEY }}
-        source: "."
-        target: "/root/project"
-      env:
-        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+    - name: Copy files via SCP
+      run: |
+        scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r . root@${{ secrets.VPS_HOST }}:/root/project
 
     - name: Deploy to VPS
       uses: appleboy/ssh-action@v0.1.1
